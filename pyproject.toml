@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "shell-scripts"
-version = "0.1.0"
+version = "0.1.1"
 description = "handy utilities for windows"
 readme = "README.md"
 requires-python = ">=3.7"
@@ -24,6 +24,7 @@ Repository = "https://github.com/HarshShinde0/shell"
 save-wallpaper = "shell_scripts.wallpaper:save_wallpaper"
 
 [tool.setuptools.packages.find]
+where = ["."]
 include = ["shell_scripts*"]
 
 [tool.setuptools.package-data]

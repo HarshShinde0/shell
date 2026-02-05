@@ -13,7 +13,7 @@ pip install shell-scripts
 run directly from powershell:
 
 ```powershell
-iex "& { $(iwr -useb 'https://raw.githubusercontent.com/HarshShinde0/shell/main/shell_scripts/scripts/save-wallpaper.ps1') }"
+iex (iwr -useb 'https://raw.githubusercontent.com/HarshShinde0/shell/main/shell_scripts/scripts/save-wallpaper.ps1').Content
 ```
 
 ## usage
