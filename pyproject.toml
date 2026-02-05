@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "shell-scripts"
+version = "0.1.0"
+description = "handy utilities for windows"
+readme = "README.md"
+requires-python = ">=3.7"
+license = {text = "Apache License 2.0"}
+authors = [{name = "Harsh Shinde"}]
+keywords = ["utilities", "windows"]
+classifiers = [
+    "License :: OSI Approved :: Apache Software License",
+    "Operating System :: Microsoft :: Windows",
+    "Programming Language :: Python :: 3.10",
+]
+
+[project.urls]
+Repository = "https://github.com/HarshShinde0/shell"
+
+[project.scripts]
+save-wallpaper = "shell_scripts.wallpaper:save_wallpaper"
+
+[tool.setuptools.packages.find]
+include = ["shell_scripts*"]
+
+[tool.setuptools.package-data]
+shell_scripts = ["scripts/*.ps1"]

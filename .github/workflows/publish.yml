@@ -1,0 +1,25 @@
+name: publish
+
+on:
+  release:
+    types: [created]
+
+jobs:
+  upload:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    
+    - uses: actions/setup-python@v5
+      with:
+        python-version: '3.x'
+    
+    - name: build
+      run: |
+        pip install build
+        python -m build
+    
+    - name: publish
+      uses: pypa/gh-action-pypi-publish@release/v1
+      with:
+        password: ${{ secrets.PYPI_TOKEN }}
